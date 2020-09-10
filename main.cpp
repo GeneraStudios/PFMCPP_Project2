@@ -76,12 +76,7 @@ void variableDeclarations()
     char lastLetter = 's';
     char middleInitial = 'r';
 
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
-
-
-
-    ignoreUnused(a, b, c, myFloat, pi, randomNumber, checka, checkb, checkc, myDouble1, myDouble2, myDouble3, firstLetter, lastLetter, middleInitial);               
+    ignoreUnused(number, a, b, c, myFloat, pi, randomNumber, checka, checkb, checkc, myDouble1, myDouble2, myDouble3, firstLetter, lastLetter, middleInitial);               
 
 
 }
@@ -214,22 +209,18 @@ int main()
     
     //1)
     auto numberGuessed = guessTheNumber(7, 3);
-    ignoreUnused(numberGuessed);
     
     //2)
     auto mathDone = doSomeMath(1, 300, 3.14f);
-    ignoreUnused(mathDone);
     
     //3)
     auto statusChecked = checkTheStatus(1);
-    ignoreUnused(statusChecked);
 
     //4)
     questionExistence(28, 45);
     
     //5)
     auto thingCalculated = calculateTheThing(4.56f, 3.156f, 6.3214554f);
-    ignoreUnused(thingCalculated);
     
     //6)
     auto sum = basicAdding(3, 7);
@@ -241,18 +232,16 @@ int main()
     
     //8)
     auto foodExpired = expiredFood(365);
-    ignoreUnused(foodExpired);
     
     //9)
     auto flagStatus = statusFlag(0, 1);
-    ignoreUnused(flagStatus);
     
     //10)
     auto areaIntegrated = integrateArea(0, 28);
-    ignoreUnused(areaIntegrated);
+
+    ignoreUnused(numberGuessed, mathDone, statusChecked, thingCalculated, foodExpired, flagStatus, areaIntegrated, carRented);
     
     
-    ignoreUnused(carRented);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
