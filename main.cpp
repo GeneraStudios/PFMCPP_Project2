@@ -79,31 +79,9 @@ void variableDeclarations()
     
     ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
 
-    // ints
-    ignoreUnused(a);
-    ignoreUnused(b);
-    ignoreUnused(c);
 
-    // floats
-    ignoreUnused(myFloat);
-    ignoreUnused(pi);
-    ignoreUnused(randomNumber);
 
-    // bools
-    ignoreUnused(checka);
-    ignoreUnused(checkb);
-    ignoreUnused(checkc);
-
-    // doubles
-    ignoreUnused(myDouble1);
-    ignoreUnused(myDouble2);
-    ignoreUnused(myDouble3);
-
-    // chars
-    ignoreUnused(firstLetter);
-    ignoreUnused(lastLetter);
-    ignoreUnused(middleInitial);
-
+    ignoreUnused(a, b, c, myFloat, pi, randomNumber, checka, checkb, checkc, myDouble1, myDouble2, myDouble3, firstLetter, lastLetter, middleInitial);               
 
 
 }
@@ -184,10 +162,7 @@ int guessTheNumber(int theNumber, int numberOfTries = 3)
      {
          return true;
      }
-     else
-     {
-         return false;
-     }
+     return false;
  }
 
 /*
@@ -238,24 +213,23 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    guessTheNumber(7, 3);
-    ignoreUnused(guessTheNumber);
+    auto numberGuessed = guessTheNumber(7, 3);
+    ignoreUnused(numberGuessed);
     
     //2)
-    doSomeMath(1, 300, 3.14f);
-    ignoreUnused(doSomeMath);
+    auto mathDone = doSomeMath(1, 300, 3.14f);
+    ignoreUnused(mathDone);
     
     //3)
-    checkTheStatus(1);
-    ignoreUnused(checkTheStatus);
+    auto statusChecked = checkTheStatus(1);
+    ignoreUnused(statusChecked);
 
     //4)
     questionExistence(28, 45);
-    ignoreUnused(questionExistence);
     
     //5)
-    calculateTheThing(4.56f, 3.156f, 6.3214554f);
-    ignoreUnused(calculateTheThing);
+    auto thingCalculated = calculateTheThing(4.56f, 3.156f, 6.3214554f);
+    ignoreUnused(thingCalculated);
     
     //6)
     auto sum = basicAdding(3, 7);
@@ -266,16 +240,16 @@ int main()
     std::cout << "1 is a win: Status = " << greaterThanTest << "\n\n\n";
     
     //8)
-    expiredFood(365);
-    ignoreUnused(expiredFood);
+    auto foodExpired = expiredFood(365);
+    ignoreUnused(foodExpired);
     
     //9)
-    statusFlag(0, 1);
-    ignoreUnused(statusFlag);
+    auto flagStatus = statusFlag(0, 1);
+    ignoreUnused(flagStatus);
     
     //10)
-    integrateArea(0, 28);
-    ignoreUnused(integrateArea);
+    auto areaIntegrated = integrateArea(0, 28);
+    ignoreUnused(areaIntegrated);
     
     
     ignoreUnused(carRented);
